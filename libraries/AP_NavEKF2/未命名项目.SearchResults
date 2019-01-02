@@ -1,0 +1,8 @@
+---- delAngCorrected 匹配 (7 in 4 文件) ----
+AP_NavEKF2_core.cpp (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):    //delAngCorrected 修正后的imu增量
+AP_NavEKF2_core.cpp (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):    stateStruct.quat.rotate(delAngCorrected - prevTnb * earthRateNED*imuDataDelayed.delAngDT);
+AP_NavEKF2_core.cpp (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):	delAngBodyOF += delAngCorrected;
+AP_NavEKF2_core.h (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):    Vector3f delAngCorrected;       // corrected IMU delta angle vector at the EKF time horizon (rad)
+AP_NavEKF2_MagFusion.cpp (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):        R_MAG = sq(constrain_float(frontend->_magNoise, 0.01f, 0.5f)) + sq(frontend->magVarRateScale*delAngCorrected.length() / imuDataDelayed.delAngDT);
+AP_NavEKF2_Measurements.cpp (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):        delAngCorrected = imuDataDelayed.delAng;
+AP_NavEKF2_Measurements.cpp (e:\开源滤波代码\常见的开源飞控代码\ardupilot\libraries\ap_navekf2):        correctDeltaAngle(delAngCorrected, imuDataDelayed.delAngDT);
